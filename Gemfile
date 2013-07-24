@@ -6,8 +6,12 @@ gem 'rails', '3.2.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-
-
+gem "rspec", "~> 2.14.1"
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor','0.0.2'
+  gem 'rspec-rails', ">= 2.0.0.beta"
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
