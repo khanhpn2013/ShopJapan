@@ -1,4 +1,7 @@
 ShopJapan::Application.routes.draw do
+  resources :microposts
+
+
   get "static_page/home"
 
   get "static_page/help"
