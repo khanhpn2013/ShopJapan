@@ -10,11 +10,9 @@ gem 'faker', '1.0.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-gem "rspec", "~> 2.14.1"
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor','0.0.2'
-  gem 'rspec-rails', ">= 2.0.0.beta"
 end
 # Gems used only for assets and not required
 # in production environments by default.
@@ -28,7 +26,25 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development, :test do
+	gem 'rspec-rails'
+end
+
+group :development do
+    gem 'puma'
+    gem 'rack-mini-profiler'
+    gem 'jquery-rails'
+    gem 'turbolinks'
+    gem 'jbuilder'
+    gem "better_errors", "0.9.0"
+    gem 'debugger'
+    gem "binding_of_caller"
+    gem "rspec", "~> 2.14.1"
+end
+
+group :test do
+   
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

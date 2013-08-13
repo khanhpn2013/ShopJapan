@@ -1,11 +1,6 @@
 ShopJapan::Application.routes.draw do
   resources :microposts
 
-
-  get "static_page/home"
-
-  get "static_page/help"
-
   resources :users
 
 
@@ -14,6 +9,10 @@ ShopJapan::Application.routes.draw do
 
   resources :products
 
+  match 'help' => 'static_page#help'
+  match 'home' => 'static_page#home'
+  match 'about' => 'static_page#about'
+  resources :static_page
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
