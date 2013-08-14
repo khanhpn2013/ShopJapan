@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
-gem 'bootstrap-sass'
-gem 'will_paginate', '3.0.3'
-gem 'bootstrap-will_paginate', '0.0.5'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 # Bundle edge Rails instead:
@@ -22,12 +19,12 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
 end
 
 group :development, :test do
 	gem 'rspec-rails'
+  gem "rspec", "~> 2.14.1"
 end
 
 group :development do
@@ -39,7 +36,9 @@ group :development do
     gem "better_errors", "0.9.0"
     gem 'debugger'
     gem "binding_of_caller"
-    gem "rspec", "~> 2.14.1"
+    gem 'bootstrap-sass'
+    gem 'will_paginate', '3.0.3'
+    gem 'bootstrap-will_paginate', '0.0.5'
 end
 
 group :test do
