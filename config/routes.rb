@@ -1,6 +1,7 @@
 ShopJapan::Application.routes.draw do
   resources :microposts
-
+  
+  match 'signin' => 'users#index'
   resources :users
 
 
@@ -10,7 +11,6 @@ ShopJapan::Application.routes.draw do
   resources :products
 
   match 'help' => 'static_page#help'
-  match 'home' => 'static_page#home'
   match 'about' => 'static_page#about'
   resources :static_page
 
@@ -63,7 +63,7 @@ ShopJapan::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'static_page#home'
 
   # See how all your routes lay out with "rake routes"
 
