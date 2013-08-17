@@ -10,5 +10,6 @@ class UsersController < ApplicationController
 	end
 
 	def show
+		@user = User.find(6)
 	end
 end

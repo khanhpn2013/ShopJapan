@@ -1,7 +1,8 @@
 ShopJapan::Application.routes.draw do
   resources :microposts
   
-  match 'signin' => 'users#index'
+  match '/signin', to: 'users#index', via: 'get'
+  match '/edit_profile', to: 'users#show', via: 'get'
   resources :users
 
 

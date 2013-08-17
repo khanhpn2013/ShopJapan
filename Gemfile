@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
-gem 'bcrypt-ruby', '3.0.1'
-gem 'faker', '1.0.1'
+gem 'nokogiri'
+gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'faker'
+gem "thinking-sphinx"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -24,7 +26,7 @@ end
 
 group :development, :test do
 	gem 'rspec-rails'
-  gem "rspec", "~> 2.14.1"
+  gem "rspec"
 end
 
 group :development do
@@ -33,16 +35,18 @@ group :development do
     gem 'jquery-rails'
     gem 'turbolinks'
     gem 'jbuilder'
-    gem "better_errors", "0.9.0"
+    gem "better_errors"
     gem 'debugger'
     gem "binding_of_caller"
     gem 'bootstrap-sass'
-    gem 'will_paginate', '3.0.3'
-    gem 'bootstrap-will_paginate', '0.0.5'
+    gem 'will_paginate'
+    gem 'bootstrap-will_paginate'
 end
 
 group :test do
-   
+   gem "factory_girl"
+   gem "shoulda"
+   gem "capybara"
 end
 
 # To use ActiveModel has_secure_password
