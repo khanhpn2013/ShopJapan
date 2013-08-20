@@ -1,7 +1,11 @@
 ShopJapan::Application.routes.draw do
   resources :microposts
   
-  match '/signin', to: 'users#index', via: 'get'
+  match '/signup', to: 'users#index', via: 'get'
+
+  resources :sessions, only: [:new, :create, :destroy]
+  match '/signin', to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/edit_profile', to: 'users#show', via: 'get'
   resources :users
 
