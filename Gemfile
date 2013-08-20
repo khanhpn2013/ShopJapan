@@ -5,12 +5,14 @@ gem 'nokogiri'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'faker'
 gem "thinking-sphinx"
+gem 'newrelic_rpm'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
 group :production do
-  gem 'pg', '0.15.1'
+  gem 'pg'
   gem 'rails_12factor','0.0.2'
 end
 # Gems used only for assets and not required
@@ -41,6 +43,7 @@ group :development do
     gem 'bootstrap-sass'
     gem 'will_paginate'
     gem 'bootstrap-will_paginate'
+    gem 'sqlite3', '1.3.7'
 end
 
 group :test do
